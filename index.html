@@ -1013,19 +1013,20 @@
         }
         }
 
-  // Force smooth scrolling inside iframe and standalone view
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Force smooth scrolling for all internal anchor links inside and outside iframes
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   });
     </script>
 </body>
