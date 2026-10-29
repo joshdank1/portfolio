@@ -93,12 +93,12 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-1 lg:space-x-6 text-sm font-medium">
-                    <a href="#about" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">About</a>
-                    <a href="#skills" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Skills</a>
-                    <a href="#projects" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Featured Capstone</a>
-                    <a href="#certifications" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Certifications</a>
-                    <a href="#experience" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Experience</a>
-                    <a href="#contact" target="_self" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Contact</a>
+                    <a href="#about" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">About</a>
+                    <a href="#skills" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Skills</a>
+                    <a href="#projects" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Featured Capstone</a>
+                    <a href="#certifications" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Certifications</a>
+                    <a href="#experience" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Experience</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg hover:text-brand-500 transition-colors hover:bg-slate-900/50 light:hover:bg-slate-100">Contact</a>
                 </nav>
 
                 <!-- Actions & Mobile Menu Button -->
@@ -1011,23 +1011,6 @@
                 window.print();
             }, 800);
         }
-        }
-
-// Force smooth scrolling for all internal anchor links inside and outside iframes
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
-    if (!targetId || targetId === '#') return;
-    
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      e.preventDefault();
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
     </script>
 </body>
 </html>
